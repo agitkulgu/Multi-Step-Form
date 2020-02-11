@@ -21,9 +21,36 @@ export class FormUserDetails extends Component {
                         onChange={handleChange('firstName')}
                         defaultValue={values.firstName}
                     />
+                    <br/>
+                    <TextField 
+                        hintText="Enter Your Last Name"
+                        floatingLabelText="Last Name"
+                        onChange={handleChange('lastName')}
+                        defaultValue={values.lastName}
+                    />
+                     <br/>
+                    <TextField 
+                        hintText="email"
+                        floatingLabelText="Email"
+                        onChange={handleChange('email')}
+                        defaultValue={values.email}
+                    />
+                    <br/>
+                    <RaisedButton 
+                        label="Continue"
+                        primary={true}
+                        style={styles.button}
+                        onClick={this.continue}
+                    />
                 </React.Fragment>
             </MuiThemeProvider>
         );
+    }
+}
+
+const styles = {
+    button: {
+        margin:15
     }
 }
 export default FormUserDetails
